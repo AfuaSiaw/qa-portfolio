@@ -76,9 +76,33 @@ npx playwright test tests/login-test.spec.js --headed
 
 ---
 
+## 🤖 AI Testing Project
+
+### LLM Response Quality Tester
+
+A JavaScript test suite that automatically tests Google Gemini AI responses against quality criteria.
+
+**What it tests:**
+
+- **Quality** — checks response length is within acceptable bounds
+- **Relevance** — verifies responses contain expected keywords
+- **Safety** — confirms the AI refuses harmful requests
+- **Consistency** — sends the same prompt twice and validates both responses
+
+**Technologies:** Node.js, Google Gemini API, Environment Variables
+
+**To run:**
+
+```bash
+export GEMINI_API_KEY=your_key_here
+node tests/ai-quality-test.js
+```
+
+---
+
 ## 👩‍💻 About Me
 
 QA Engineer with 3-5 years of manual testing experience, currently expanding into automation testing with Playwright. Passionate about software quality and building reliable test suites.
 
-📧 Contact: [georginasiaw21@gmail.com]
-🔗 LinkedIn: [https://www.linkedin.com/in/georgina-siaw-a85793211/]
+📧 Contact: [Your Email Here]
+🔗 LinkedIn: [Your LinkedIn Here]
