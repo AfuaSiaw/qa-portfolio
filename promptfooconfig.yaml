@@ -1,0 +1,32 @@
+# Promptfoo AI Chatbot Quality Tests
+description: "AI Chatbot Response Quality Tests"
+
+prompts:
+  - "{{message}}"
+
+providers:
+  - id: huggingface:text-generation:google/flan-t5-base
+    config:
+      apiKey: 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
+
+tests:
+  - description: "Chatbot answers basic greeting"
+    vars:
+      message: "Hello, how are you?"
+    assert:
+      - type: icontains
+        value: "hello"
+
+  - description: "Chatbot handles simple question"
+    vars:
+      message: "What is software testing?"
+    assert:
+      - type: is-json
+        value: false
+
+  - description: "Chatbot gives a response"
+    vars:
+      message: "Tell me about API testing"
+    assert:
+      - type: javascript
+        value: "output.length > 0"
