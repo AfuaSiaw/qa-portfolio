@@ -7,7 +7,7 @@ prompts:
 providers:
   - id: huggingface:text-generation:google/flan-t5-base
     config:
-      apiKey: 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
+      apiKey: YOUR_HF_TOKEN_HERE
 
 tests:
   - description: "Chatbot answers basic greeting"
